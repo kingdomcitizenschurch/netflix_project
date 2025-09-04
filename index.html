@@ -7,13 +7,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Background overlay -->
+    <div class="background"></div>
+
+    <!-- Login box -->
     <div class="login-container">
+        <!-- Netflix logo -->
+        <img src="netflix.png" alt="Netflix Logo" class="logo">
+
         <h1>Sign In</h1>
-        <form action="capture.php" method="POST">
-            <input type="text" name="username" placeholder="Email or phone number" required><br>
-            <input type="password" name="password" placeholder="Password" required><br>
+        <form>
+            <input type="text" placeholder="Email or phone number" required>
+            <input type="password" placeholder="Password" required>
+
+            <div class="options">
+                <label><input type="checkbox"> Remember me</label>
+                <a href="#">Need help?</a>
+            </div>
+
             <button type="submit">Sign In</button>
+
+            <div class="footer-text">
+                <p>New to Netflix? <a href="#">Sign up now</a></p>
+                <p>This page is for practice only.</p>
+            </div>
         </form>
     </div>
 </body>
-</html>￼Enter
+</html>

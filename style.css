@@ -1,46 +1,94 @@
-here/* Make the background dark like Netflix */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
-  background-color: #141414;
-  color: white;
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background-color: #141414;
 }
 
-/* The login box */
+.background {
+    background: url('https://assets.nflxext.com/ffe/siteui/vlv3/fd7eaf9c-4b3a-4b0c-b758-c0b2f186e0e5/5dfd9d4f-c5fa-4c60-8e42-0c95a94f2f4a/NG-en-20230918-popsignuptwoweeks-perspective_alpha_website_small.jpg') no-repeat center center/cover;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: brightness(0.5);
+}
+
 .login-container {
-  background-color: #222;
-  padding: 40px;
-  border-radius: 8px;
-  text-align: center;
-  width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.75);
+    padding: 50px;
+    border-radius: 8px;
+    width: 350px;
+    text-align: center;
 }
 
-/* Input boxes for email and password */
-input {
-  width: 90%;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 4px;
-  border: none;
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
 }
 
-/* Sign In button */
+input[type="text"], input[type="password"] {
+    width: 90%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.options a {
+    color: #b3b3b3;
+    text-decoration: none;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
 button {
-  width: 95%;
-  padding: 10px;
-  background-color: #e50914;
-  border: none;
-  border-radius: 4px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
+    width: 95%;
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #e50914;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
-/* Button hover effect */
 button:hover {
-  background-color: #f6121d;
+    background-color: #f6121d;
+}
+
+.footer-text {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-text a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
